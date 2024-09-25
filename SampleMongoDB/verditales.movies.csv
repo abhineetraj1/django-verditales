@@ -1,0 +1,3 @@
+_id,name,poster,trailer,dimensions[0],category[0],category[1],category[2],duration,releaseDate,language[0],age,status
+66f46508fb9c7bce6233dfe7,Civil War,/static/media/movies/20240926010120024206.png,https://www.youtube.com/watch?v=aDyQxtg0V2w,2d,dystopian,thriller,,109,12 April 2024,english,R,running
+66f4669a4e03e0f75e27037e,Mr. Bachchan - The Only Hope,/static/media/movies/20240926010802841778.png,https://www.youtube.com/watch?v=cGZiZTUY4po,2d,romantic,action,drama,155,"15 August, 2024",Telugu,UA,running

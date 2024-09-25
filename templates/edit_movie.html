@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Add movie</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="shortcut icon" href="/static/media/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/static/style/add_movie.css">
+</head>
+<body>
+
+<img src="{{data.poster}}" id="poster">
+
+<div id="cnt">
+	<center>
+		<form method="POST" action="/edit_movie/{{email}}/{{password}}/{{iid}}/" id="frm" enctype="multipart/form-data">
+			{% csrf_token %}
+			<input name="name" class="inpt" type="text" placeholder="Enter movie name" value="{{name}}">
+			<p>Change poster : <input type="file" name="file"></p>
+			<input name="trailer" class="inpt" type="text" placeholder="Enter youtube trailer" value="{{trailer}}">
+			<input name="dimensions" class="inpt" type="text" placeholder="Enter dimensions (2d,3d)" value="{% for i in dimensions %}{{i}},{% endfor %}">
+			<input name="duration" class="inpt" type="number" placeholder="Enter duration (in minutes)" value="{{duration}}">
+			<input name="releaseDate" class="inpt" type="text" placeholder="Enter release date" value="{{releaseDate}}">
+			<input name="language" class="inpt" type="text" placeholder="Enter language (hindi,english,...)" value="{% for i in language %}{{i}},{% endfor %}">
+			<input name="age" class="inpt" type="text" placeholder="Enter rating (13+,A,R)" value="{{age}}">
+			<input name="category" class="inpt" type="text" placeholder="Enter category (Adventure,thriller,...)" value="{% for i in category %}{{i}},{% endfor %}">
+			<p><a href="/admin_dashboard/{{email}}/{{password}}/" style="color: black;padding: 10px;"><i class="material-icons">arrow_back</i></a> <button class="btn">Edit movie</button></p>
+		</form>
+	</center>
+</div>
+<script type="text/javascript">
+	window.history.pushState("object or string", "Title", "/edit_movie");
+	document.getElementsByTagName('input')[4].value = document.getElementsByTagName('input')[4].value.slice(0,-1);
+	document.getElementsByTagName('input')[7].value = document.getElementsByTagName('input')[7].value.slice(0,-1);
+	document.getElementsByTagName('input')[9].value = document.getElementsByTagName('input')[9].value.slice(0,-1);
+</script>
+</body>
+</html>
