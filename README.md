@@ -1,4 +1,9 @@
-# Movie Management System with Django and MongoDB - Verditales
+# Verditales
+
+
+
+https://github.com/user-attachments/assets/2f6515f6-0163-4ba4-b3c3-53ea15416781
+
 
 We have developed a Django-powered web application that enables administrators to manage movie information. The application features functionalities for uploading, editing, archiving, and deleting movie data. MongoDB serves as the underlying database, while Django provides the necessary security framework. This project was undertaken as a personal endeavor.
 
